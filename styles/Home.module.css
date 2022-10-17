@@ -2,6 +2,78 @@
   padding: 0 2rem;
 }
 
+.colorRed {
+  color: red;
+}
+
+.btn, 
+a.btn, 
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem; 
+}
+
+.btn__orange,
+a.btn__orange {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: absolute;
+  left: 300px;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn__orange:hover,
+a.btn__orange:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.table_th{
+  font-size: 1.6rem;
+  width: 250px;
+  height: 50px;
+}
+
+.table_td{
+  font-size: 2rem;
+  width: 250px;
+  height: 50px;
+}
+
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
