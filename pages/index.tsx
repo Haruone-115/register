@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { Component, MouseEvent } from 'react';
 import React from 'react';
+import { throws } from 'assert';
 
 const Product = "商品";
 const Label = "商品A";
@@ -44,31 +45,53 @@ export default App;
 class Toggle extends Component {
   constructor(props) {
     super(props);
-    this.state = {isToggleOn: true};
-
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      isToggleOn: true,
+      productname: ''
+    };
+    this.delateClick = this.delateClick.bind(this);
   }
 
-  handleClick() {
+  handleClick = () => {
     this.setState(state => ({
-      isToggleOn: !state.isToggleOn
+      isToggleOn: !state.isToggleOn,
+      productname: Label,
+    }));
+  }
+
+  delateClick = () => {
+    //this.setState(state => ({
+      //isToggleOn: !state.isToggleOn
+    //}));
+    alert("delate");
+    this.setState(state => ({
+      productname: "",
     }));
   }
 
   render() {
+    //const productname = this.state;
     return (
       <>
-        <div className='handleClick'>
-          <button className={styles.btn__orange} onClick={this.handleClick}>
-            {Label}
-          </button>
-        </div>
-        <table border={1}>
+
+        <button className={styles.btn__orange} onClick={this.handleClick}>
+          {Label}
+        </button>
+        <button className={styles.btn__orange_1} onClick={this.delateClick}>
+          削除
+        </button>
+        <table border={2}>
         <tr>
           <th className={styles.table_th}>{Product}</th>
         </tr>
         <tr>
-          <td className={styles.table_td} id="product_name">{this.state.isToggleOn ? '' : (Label)}</td>
+          <td className={styles.table_td} id="product_name">{this.state.productname}</td>
+        </tr>
+        <tr>  
+          <td className={styles.table_td}></td>        
+        </tr>
+        <tr>
+          <td className={styles.table_td}></td>
         </tr>
         </table>
       </>
