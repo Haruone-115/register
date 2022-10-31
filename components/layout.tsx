@@ -43,9 +43,6 @@ export default function Layout({ children, title, description}: Props) {
           </header>
 
 
-            <a href="/" className={styles.card}>
-              <h2>Home &rarr;</h2>
-            </a>
             <a href="/ibaraki" className={styles.card}>
               <h2>茨城県 &rarr;</h2>
             </a>
