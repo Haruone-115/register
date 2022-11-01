@@ -47,7 +47,8 @@ class Toggle extends Component {
     super(props);
     this.state = {
       isToggleOn: true,
-      productname: ''
+      productname: '',
+      flag: 0,
     };
     this.delateClick = this.delateClick.bind(this);
   }
@@ -56,17 +57,17 @@ class Toggle extends Component {
     this.setState(state => ({
       isToggleOn: !state.isToggleOn,
       productname: Label,
+      flag: this.state.flag + 1,
     }));
   }
 
   delateClick = () => {
-    //this.setState(state => ({
-      //isToggleOn: !state.isToggleOn
-    //}));
-    alert("delate");
     this.setState(state => ({
+      isToggleOn: !state.isToggleOn,
+      flag: 0,
       productname: "",
     }));
+    alert("delate");
   }
 
   render() {
@@ -85,13 +86,13 @@ class Toggle extends Component {
           <th className={styles.table_th}>{Product}</th>
         </tr>
         <tr>
-          <td className={styles.table_td} id="product_name">{this.state.productname}</td>
+          <td className={styles.table_td}>{this.state.flag >= 1 ? this.state.productname : ""}</td>
         </tr>
         <tr>  
-          <td className={styles.table_td}></td>        
+          <td className={styles.table_td}>{this.state.flag >= 2 ? this.state.productname : ""}</td>        
         </tr>
         <tr>
-          <td className={styles.table_td}></td>
+          <td className={styles.table_td}>{this.state.flag >= 3 ? this.state.productname : ""}</td>
         </tr>
         </table>
       </>
