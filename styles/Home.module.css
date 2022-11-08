@@ -31,8 +31,8 @@ button.btn {
 }
 
 
-.btn__orange,
-a.btn__orange {
+.btn__orange_1,
+a.btn__orange_1 {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
@@ -56,19 +56,19 @@ a.btn__orange {
   color: #fff;
   background-color: #eb6100;
 }
-.btn__orange:hover,
-a.btn__orange:hover {
+.btn__orange_1:hover,
+a.btn__orange_1:hover {
   color: #fff;
   background: #f56500;
 }
 
-.btn__orange_1,
-a.btn__orange_1 {
+.btn__orange_2,
+a.btn__orange_2 {
   font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.5;
   position: absolute;
-  left: 600px;
+  left: 550px;
   display: inline-block;
   padding: 1rem 4rem;
   cursor: pointer;
@@ -87,10 +87,73 @@ a.btn__orange_1 {
   color: #fff;
   background-color: #eb6100;
 }
-.btn__orange_1:hover,
-a.btn__orange_1:hover {
+.btn__orange_2:hover,
+a.btn__orange_2:hover {
   color: #fff;
   background: #f56500;
+}
+
+.btn__orange_3,
+a.btn__orange_3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: absolute;
+  left: 800px;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #eb6100;
+}
+.btn__orange_3:hover,
+a.btn__orange_3:hover {
+  color: #fff;
+  background: #f56500;
+}
+
+.btn__delete,
+a.btn__delete {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: absolute;
+  left: 600px;
+  top: 600px;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+  color: #fff;
+  background-color: #aab2c1;
+}
+.btn__delete:hover,
+a.btn__delete:hover {
+  color: #fff;
+  background: #aab2c1;
 }
 
 .table_th{
