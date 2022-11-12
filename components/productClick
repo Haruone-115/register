@@ -1,0 +1,19 @@
+import styles from '../styles/Home.module.css';
+import React, { useState } from 'react';
+
+function ProductClick ({Label, setShow, setFlag, flag, setProductname, productname, btn_number}){
+    if (Label == "")
+    {
+      setShow(true);
+    }
+    else
+    {
+      setFlag(flag + 1);
+      setProductname([...productname, Label]);  
+    }
+    return (
+        <button>
+    );
+};
+
+export default ProductClick;

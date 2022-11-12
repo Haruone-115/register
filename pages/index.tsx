@@ -2,77 +2,8 @@ import styles from '../styles/Home.module.css'
 import { Component, MouseEvent } from 'react';
 import React, { useState, useRef } from 'react';
 import { throws } from 'assert';
-
-
-
-function Modal1 ({Label1, setLabel1, show1, setShow1}){
-  var Label1Ref = useRef(null);
-  const handleSubmit = () => {
-    console.log(Label1);
-    setLabel1(Label1Ref.current.value);
-    setShow1(false);
-  }
-  if (show1) {
-    return (
-      <div className={styles.overlay}>
-        <div className={styles.content}>
-          商品名を入力してください。
-          <input type = "text" ref={Label1Ref}  />
-          <button onClick={handleSubmit} >submit</button>
-        </div>
-      </div>
-    )
-  }
-  else {
-    return null;
-  }
-}
-
-function Modal2 ({Label2, setLabel2, show2, setShow2}){
-  var Label2Ref = useRef(null);
-  const handleSubmit = () => {
-    console.log(Label2);
-    setLabel2(Label2Ref.current.value);
-    setShow2(false);
-  }
-  if (show2) {
-    return (
-      <div className={styles.overlay}>
-        <div className={styles.content}>
-          商品名を入力してください。
-          <input type = "text" ref={Label2Ref}  />
-          <button onClick={handleSubmit} >submit</button>
-        </div>
-      </div>
-    )
-  }
-  else {
-    return null;
-  }
-}
-
-function Modal3 ({Label3, setLabel3, show3, setShow3}){
-  var Label3Ref = useRef(null);
-  const handleSubmit = () => {
-    console.log(Label3);
-    setLabel3(Label3Ref.current.value);
-    setShow3(false);
-  }
-  if (show3) {
-    return (
-      <div className={styles.overlay}>
-        <div className={styles.content}>
-          商品名を入力してください。
-          <input type = "text" ref={Label3Ref}  />
-          <button onClick={handleSubmit} >submit</button>
-        </div>
-      </div>
-    )
-  }
-  else {
-    return null;
-  }
-}
+import Table from '../components/table'
+import Modal from '../components/Modal'
 
 
 export default function App() {
@@ -132,19 +63,19 @@ export default function App() {
     return (
     <>
     <div>
-      <Modal1 Label1={Label1} setLabel1={setLabel1} show1={show1} setShow1={setShow1} />
+      <Modal Label={Label1} setLabel={setLabel1} show={show1} setShow={setShow1} />
       <button className={styles.btn__orange_1} onClick={productClick_1}>
         {Label1}
       </button>
     </div>
     <div>
-      <Modal2 Label2={Label2} setLabel2={setLabel2} show2={show2} setShow2={setShow2} />
+      <Modal Label={Label2} setLabel={setLabel2} show={show2} setShow={setShow2} />
       <button className={styles.btn__orange_2} onClick={productClick_2}>
         {Label2}
       </button>
     </div>
     <div>
-      <Modal3 Label3={Label3} setLabel3={setLabel3} show3={show3} setShow3={setShow3} />
+      <Modal Label={Label3} setLabel={setLabel3} show={show3} setShow={setShow3} />
       <button className={styles.btn__orange_3} onClick={productClick_3}>
         {Label3}
       </button>
@@ -152,20 +83,7 @@ export default function App() {
     <button className={styles.btn__delete} onClick={delateClick}>
       削除
     </button>
-    <table border={2}>
-    <tr>
-      <th className={styles.table_th}>{Product}</th>
-    </tr>
-    <tr>
-      <td className={styles.table_td}>{flag >= 1 ? productname[0] : ""}</td>
-    </tr>
-    <tr>  
-      <td className={styles.table_td}>{flag >= 2 ? productname[1] : ""}</td>        
-    </tr>
-    <tr>
-      <td className={styles.table_td}>{flag >= 3 ? productname[2] : ""}</td>
-    </tr>
-    </table>
+    <Table Product={Product} flag = {flag} productname = {productname} />
     </>
     
   );
