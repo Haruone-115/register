@@ -1,7 +1,8 @@
 import styles from '../styles/Home.module.css';
 import React, { useState } from 'react';
 
-function ProductClick ({Label, setShow, setFlag, flag, setProductname, productname, btn_number}){
+function ProductClick ({Label, setShow, setFlag, flag, setProductname, productname, styles_name}){
+  const productClick = () => {
     if (Label == "")
     {
       setShow(true);
@@ -11,8 +12,11 @@ function ProductClick ({Label, setShow, setFlag, flag, setProductname, productna
       setFlag(flag + 1);
       setProductname([...productname, Label]);  
     }
+  }
     return (
-        <button>
+      <button className={styles_name} onClick={productClick}>
+        {Label}
+      </button>
     );
 };
 
