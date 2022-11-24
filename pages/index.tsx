@@ -6,6 +6,7 @@ import 'react-tabs/style/react-tabs.css';
 import { throws } from 'assert';
 import Table from '../components/table'
 import Modal from '../components/Modal'
+import Delete from '../components/delete'
 import ProductClick from '../components/productClick'
 import { BADHINTS } from 'dns';
 
@@ -21,15 +22,7 @@ export default function App() {
   const [Label1, setLabel1] = useState("");
   const [Label2, setLabel2] = useState("");
   const [Label3, setLabel3] = useState("");
-
-
-  const delateClick = () => {
-    setFlag(0);
-    setProductname ([]);
-    alert("delate");
-  }
-
-    return (
+  return (
     <>
       <Tabs>
         <TabList>
@@ -52,13 +45,10 @@ export default function App() {
             <Modal Label={Label3} setLabel={setLabel3} show={show3} setShow={setShow3} />
             <ProductClick Label={Label3} setShow={setShow3} setFlag={setFlag} flag={flag} setProductname={setProductname} productname={productname} styles_name={styles.btn__orange_3} />
           </div>
-          <button className={styles.btn__delete} onClick={delateClick}>
-            削除
-          </button>
+          <Delete setFlag={setFlag} setProductname={setProductname}></Delete>
         </TabPanel>
         <Table Product={Product} flag = {flag} productname = {productname} />
       </Tabs>
     </>
-    
   );
-}
+};
