@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import { Component, MouseEvent } from 'react';
 import React, { useState, useRef } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { throws } from 'assert';
 import Table from '../components/table'
 import Modal from '../components/Modal'
