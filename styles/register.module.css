@@ -1,0 +1,95 @@
+/* ↩ Frame 1  ボタンの親要素に設定。*/
+.frame_container {
+    position: absolute;
+    width: 1081px;
+    height: 636px;
+    left: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* Button*/
+.button_register_1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 232px;
+  height: 86px;
+  background: #eb6100;
+  border-radius: 8px;
+  
+}
+.button_register_2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 232px;
+  height: 86px;
+  background: #3ff0c9;
+  border-radius: 8px;
+}
+.button_register_3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  width: 232px;
+  height: 86px;
+  background: #b658a2;
+  border-radius: 8px;
+}
+
+/*Modal*/
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content{
+  z-index: 2;
+  width:50%;
+  padding: 1em;
+  background:#fff;
+  color:#111;
+  border-radius: 8px;
+}
+
+
+.btn__delete,
+a.btn__delete {
+  position: absolute;
+  width: 232px;
+  height: 86px;
+  left: 957px;
+  top: 645px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  display: inline-block;
+  padding: 1rem 4rem;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #212529;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #D9D9D9;
+  opacity: 0.99;
+}
+.btn__delete:hover,
+a.btn__delete:hover {
+  color: #fff;
+  background: #ffefe5;
+}
+
+
+
+
+
+

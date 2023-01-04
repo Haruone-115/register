@@ -1,17 +1,22 @@
-import styles from '../styles/Home.module.css';
+import register from '../styles/register.module.css';
 import React, { useRef } from 'react';
 
-function Modal ({Label, setLabel, show, setShow}){
+function Modal ({Labels, setLabels, shows, setShows, number}){
     var LabelRef = useRef(null);
+    
     const handleSubmit = () => {
-      console.log(Label);
-      setLabel(LabelRef.current.value);
-      setShow(false);
+      console.log(Labels);
+      setLabels(
+        Labels.map((Label, index) => (index === number ? LabelRef.current.value : Label))
+      );
+      setShows(
+        shows.map((show, index) => (index === number ? false : show))
+      );
     }
-    if (show) {
+    if (shows[number]) {
       return (
-        <div className={styles.overlay}>
-          <div className={styles.content}>
+        <div className={register.overlay}>
+          <div className={register.content}>
             商品名を入力してください。
             <input type = "text" ref={LabelRef}  />
             <button onClick={handleSubmit} >submit</button>

@@ -6,6 +6,29 @@
   color: red;
 }
 
+.btn_flex{
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.btn_flex > *{
+  min-width: 8%;
+  flex-basis: 25%;
+  background: #fff;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.btn_flex,
+.btn_flex > *{
+  border: 3px solid #aaa;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .btn, 
 a.btn, 
 button.btn {

@@ -1,4 +1,4 @@
-import styles from '../styles/Home.module.css';
+import register from '../styles/register.module.css';
 import React, { useRef } from 'react';
 
 function Delete ({setFlag, setProductname}){
@@ -8,7 +8,7 @@ function Delete ({setFlag, setProductname}){
         alert("delate");
     }
     return (
-        <button className={styles.btn__delete} onClick={delateClick}>
+        <button className={register.btn__delete} onClick={delateClick}>
             削除
         </button>
     );

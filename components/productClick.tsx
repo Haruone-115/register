@@ -1,23 +1,53 @@
-import styles from '../styles/Home.module.css';
+import register from '../styles/register.module.css'
 import React, { useState } from 'react';
 
-function ProductClick ({Label, setShow, setFlag, flag, setProductname, productname, styles_name}){
+
+function ProductClick ({Labels, shows, setShows, setFlag, flag, setProductname, productname, number, tab_flag}){
   const productClick = () => {
-    if (Label == "")
+    if (Labels[number] == "")
     {
-      setShow(true);
+      setShows(
+        shows.map((show, index) => (index === number ? true: show))
+      )
     }
     else
     {
       setFlag(flag + 1);
-      setProductname([...productname, Label]);  
+      setProductname([...productname, Labels[number]]);  
     }
   }
+
+  if (tab_flag == 1){
     return (
-      <button className={styles_name} onClick={productClick}>
-        {Label}
-      </button>
+      <div>  
+        <button className={register.button_register_1 } onClick={productClick}>
+          {Labels[number]}
+        </button>
+      </div>
     );
+  }
+  else if (tab_flag == 2){
+    return (
+      <div>  
+        <button className={register.button_register_2 } onClick={productClick}>
+          {Labels[number]}
+        </button>
+      </div>
+    );
+  }
+  else if (tab_flag == 3){
+    return (
+      <div>  
+        <button className={register.button_register_3 } onClick={productClick}>
+          {Labels[number]}
+        </button>
+      </div>
+    );
+  }
+  else{
+    return null;
+  }
+    
 };
 
 export default ProductClick;
