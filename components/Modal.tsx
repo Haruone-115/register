@@ -15,11 +15,13 @@ function Modal ({Labels, setLabels, shows, setShows, number}){
     }
     if (shows[number]) {
       return (
-        <div className={register.overlay}>
-          <div className={register.content}>
-            商品名を入力してください。
-            <input type = "text" ref={LabelRef}  />
-            <button onClick={handleSubmit} >submit</button>
+        <div key={number}>
+          <div className={register.overlay}>
+            <div className={register.content}>
+              商品名を入力してください。
+              <input type = "text" ref={LabelRef}  />
+              <button onClick={handleSubmit} >submit</button>
+            </div>
           </div>
         </div>
       )

@@ -35,10 +35,10 @@ export default function App() {
   for (var j = 0; j < BUTTON_AMOUNT; j++){
     button_list_1.push(
       <div>
-          <Modal Labels={Labels_1} setLabels={setLabels_1} shows={shows_1} setShows={setShows_1} number={j}/>
+          <Modal Labels={Labels_1} setLabels={setLabels_1} shows={shows_1} setShows={setShows_1} number={j} key={j}/>
           <ProductClick 
             Labels={Labels_1} shows={shows_1} setShows={setShows_1} setFlag={setFlag} 
-            flag={flag} setProductname={setProductname} productname={productname} number={j} tab_flag={1}/>
+            flag={flag} setProductname={setProductname} productname={productname} number={j} tab_flag={1} key={j}/>
       </div>
     );
   }
@@ -46,10 +46,10 @@ export default function App() {
   for (var k = 0; k < BUTTON_AMOUNT; k++){
     button_list_2.push(
       <div>
-          <Modal Labels={Labels_2} setLabels={setLabels_2} shows={shows_2} setShows={setShows_2} number={k}/>
+          <Modal Labels={Labels_2} setLabels={setLabels_2} shows={shows_2} setShows={setShows_2} number={k} key={k}/>
           <ProductClick
             Labels={Labels_2} shows={shows_2} setShows={setShows_2} setFlag={setFlag}
-            flag={flag} setProductname={setProductname} productname={productname} number={k} tab_flag={2}/>
+            flag={flag} setProductname={setProductname} productname={productname} number={k} tab_flag={2} key={k}/>
       </div>
     );
   }
@@ -57,10 +57,10 @@ export default function App() {
   for (var l = 0; l < BUTTON_AMOUNT; l++){
     button_list_3.push(
       <div>
-          <Modal Labels={Labels_3} setLabels={setLabels_3} shows={shows_3} setShows={setShows_3} number={l}/>
+          <Modal Labels={Labels_3} setLabels={setLabels_3} shows={shows_3} setShows={setShows_3} number={l} key={l}/>
           <ProductClick 
             Labels={Labels_3} shows={shows_3} setShows={setShows_3} setFlag={setFlag}
-            flag={flag} setProductname={setProductname} productname={productname} number={l} tab_flag={3}/>
+            flag={flag} setProductname={setProductname} productname={productname} number={l} tab_flag={3} key={l}/>
       </div>
     );
   }

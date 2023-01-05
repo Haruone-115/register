@@ -19,7 +19,7 @@ function ProductClick ({Labels, shows, setShows, setFlag, flag, setProductname, 
 
   if (tab_flag == 1){
     return (
-      <div>  
+      <div key={number}>  
         <button className={register.button_register_1 } onClick={productClick}>
           {Labels[number]}
         </button>
@@ -28,7 +28,7 @@ function ProductClick ({Labels, shows, setShows, setFlag, flag, setProductname, 
   }
   else if (tab_flag == 2){
     return (
-      <div>  
+      <div key={number}>  
         <button className={register.button_register_2 } onClick={productClick}>
           {Labels[number]}
         </button>
@@ -37,7 +37,7 @@ function ProductClick ({Labels, shows, setShows, setFlag, flag, setProductname, 
   }
   else if (tab_flag == 3){
     return (
-      <div>  
+      <div key={number}>  
         <button className={register.button_register_3 } onClick={productClick}>
           {Labels[number]}
         </button>
