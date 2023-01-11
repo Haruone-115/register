@@ -1,6 +1,44 @@
+import React from 'react';
+import { withStyles, Theme, createStyles, makeStyles } from '@material-ui/core/styles';
+import { mergeClasses } from '@material-ui/styles';
 import styles from '../styles/Home.module.css'
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+import Paper from '@material-ui/core/Paper';
 
-function Tables ({Product, flag, productname}) {
+
+const StyledTableCell = withStyles((theme: Theme) =>
+  createStyles({
+    head: {
+      backgroundColor: theme.palette.common.black,
+      color: theme.palette.common.white,
+    },
+    body: {
+      fontSize: 14,
+    },
+  }),
+)(TableCell);
+
+const StyledTableRow = withStyles((theme: Theme) =>
+  createStyles({
+    root: {
+      '&:nth-of-type(odd)': {
+        backgroundColor: theme.palette.action.hover,
+      },
+    },
+  }),
+)(TableRow);
+const UseStyles = makeStyles({
+  table: {
+    minWidth: 700,
+  },
+});
+
+/*function Tables ({Product, flag, productname}) {
     return(
         <table border={2}>
         <tr>
@@ -43,5 +81,31 @@ function Tables ({Product, flag, productname}) {
         </table>
     );
 };
+*/
 
-export default Tables;
+function table_tests({Product, productname}){
+  const classes = UseStyles();
+  return(
+    <TableContainer component={Paper}>
+      <Table className={classes.table} aria-label="customized table">
+        <TableHead>
+          <TableRow>
+            <StyledTableCell>{Product}</StyledTableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {productname.map((productname) => (
+            <StyledTableRow key={productname.name}>
+              <StyledTableCell component="th" scope="row">
+                {productname.name}
+              </StyledTableCell>
+            </StyledTableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+
+  );
+};
+
+export default table_tests;

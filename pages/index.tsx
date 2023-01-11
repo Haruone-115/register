@@ -102,7 +102,7 @@ export default function App() {
           </TabPanel>
         </div>
 
-        <Table Product={Product} flag = {flag} productname = {productname} />
+        <Table Product={Product} productname = {productname} />
       </Tabs>
     </>
   );
